@@ -1,8 +1,8 @@
 import cv2 as cv #type: ignore
 import numpy as np #type: ignore
 
-image = cv.imread('./test-images/face-image.jpg')
-# image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
+image = cv.imread('./test-images/monkey.jpeg')
+image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
 image = cv.resize(image,(540,760))
 # cv.imshow('Image', image)
 # cv.waitKey(0)
