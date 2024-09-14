@@ -1,9 +1,9 @@
 import cv2 as cv #type: ignore
 import numpy as np #type: ignore
 
-image = cv.imread('./test-images/monkey.jpeg')
+image = cv.imread('./test-images/face-image.jpg')
 image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
-image = cv.resize(image,(540,760))
+# image = cv.resize(image,(540,760))
 # cv.imshow('Image', image)
 # cv.waitKey(0)
 # cv.destroyAllWindows()
@@ -37,12 +37,23 @@ def yiqtorbg(yiq_image):
     rgb_img = np.clip(rgb_img, 0, 255).astype(np.uint8)
     return rgb_img
 
-yiq_img = rgbtoyiq(image)
-cv.imshow('image',yiq_img)
-cv.waitKey(0)
+#2. building gaussian pyramids
+def gaussian_pyramid(image, levels=3):
+    gaussian_pyramid=[image]
+    for i in range(levels):
+        image = cv.pyrDown(image)
+        gaussian_pyramid.append(image)
+    return gaussian_pyramid
 
-cv.imshow('image2', yiqtorbg(yiq_img))
+g = gaussian_pyramid(image)
+cv.imshow('image3', g[3])
 cv.waitKey(0)
+# yiq_img = rgbtoyiq(image)
+# cv.imshow('image',yiq_img)
+# cv.waitKey(0)
+
+# cv.imshow('image2', yiqtorbg(yiq_img))
+# cv.waitKey(0)
 
 
 
