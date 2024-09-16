@@ -8,5 +8,5 @@ Eulerian Video Magnification (EVM) is a computational technique that reveals sub
 4. Easy Integration: Compatible with various video processing workflows.
 
 
-https://github.com/user-attachments/assets/454fd6d4-12f1-4399-9fe3-decd254f1899
+
 
