@@ -7,6 +7,4 @@ Eulerian Video Magnification (EVM) is a computational technique that reveals sub
 3. Flexible Parameters: Adjust spatial and temporal frequencies for targeted magnification.
 4. Easy Integration: Compatible with various video processing workflows.
 
-
-
-
+![image](https://github.com/user-attachments/assets/da0db512-8ec9-404d-bc7b-1ff3b29b4ea3)
